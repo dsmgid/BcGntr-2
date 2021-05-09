@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Barang;
 use App\Models\Harga;
-
+use App\Models\PrintModel;
 class IndexController extends Controller
 {
     //
@@ -15,9 +15,16 @@ class IndexController extends Controller
     public function dPrint(){
         return view('printd');
     }
+    public function gPrint(){
+        $data['print'] = PrintModel::all();
+        return view('print', $data);
+    }
     public function getBarang(){
         $data['barang'] = Barang::all();
         return view('tbarang',$data);
+    }
+    public function getBarangJson(){
+        return json_encode(Barang::all());
     }
     public function addBarang(Request $request){
         $db = new Barang;
@@ -45,6 +52,14 @@ class IndexController extends Controller
     public function delHarga(Request $request){
         $db = Harga::find($request->id);
         $db->delete();
+        return true;
+    }
+    public function addPrint(Request $request){
+        $db = new PrintModel();
+        $db->nama = $request->nbs;
+        $db->barcode = $request->barcode;
+        $db->harga = $request->harga;
+        $db->save();
         return true;
     }
 }

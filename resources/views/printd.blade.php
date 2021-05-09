@@ -9,25 +9,19 @@
                         <div class="col-sm-4">
                             <input type="text" class="form-control" name="nb" id="nb" hidden>
                             <label for="usr">Nama Barang</label>
-                            <input type="text" class="form-control" id="kode" name="kode" value="" readonly hidden>
-                            <select class="form-control select2" name="nbs" id="nbs">
+                            <select class="form-control select2" name="nbs" id="nbs" onchange="getHarga()">
                                 <option></option>
                             </select>
                         </div>
-                        <div class="col-sm-2">
-                            <label for="usr">Harga Satuan</label>
-                            <input type="text" class="form-control rp" id="hargajual" name="hargajual" value=""
-                                onkeyup="sum();">
+                        <div class="col-sm-4">
+                            <label for="usr">Harga</label>
+                            <select class="form-control select2" name="harga" id="harga">
+                                <option></option>
+                            </select>
                         </div>
-                        <div class="col-sm-2">
-                            <label for="usr">Jumlah Jual</label>
-                            <input type="text" class="form-control" id="jumlah" name="jumlah" value="0"
-                                placeholder="Masukan Jumlah" onkeyup="sum();" onload="sum()">
-                        </div>
-                        <div class="col-sm-2">
-                            <label for="usr">Harga Akhir</label>
-                            <input type="text" class="form-control" id="hargaakhir" name="hargaakhir" value=""
-                                readonly>
+                        <div class="col-sm-4">
+                            <label for="usr">Barcode</label>
+                            <input type="text" class="form-control" name="barcode" id="barcode" readonly>
                         </div>
                     </div>
 
@@ -38,4 +32,7 @@
         </div>
     </div>
 </div>
+@endsection
+@section('footer')
+    <script async src="/assets/js/print.js"></script>
 @endsection

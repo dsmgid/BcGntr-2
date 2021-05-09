@@ -69,7 +69,7 @@
             </div>
             <div class="modal-body">
                 <form method="post" id="harga_form" data-parsley-validate>
-                    <input type="number" name="id" class="form-control" id="id-harga" required="" value="" readonly>
+                    <input type="number" name="id" class="form-control" id="id-harga" required="" value="" readonly hidden>
                     <div class="mb-3 form-group row">
                       <label for="number" class="col-sm-2 col-form-label">Harga</label>
                       <div class="col-sm-10">

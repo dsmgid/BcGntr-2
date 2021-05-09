@@ -16,7 +16,7 @@
                       <tr>
                         <td>{{ $item->id }}</td>
                         <td>{{ $item->nama }}</td>
-                        <td><img src="data:image/png;base64,{{ base64_encode($generator->getBarcode($item->barcode, $generator::TYPE_EAN_13))  }}"></td>
+                        <td><img src="data:image/png;base64,{{ base64_encode($generator->getBarcode($item->barcode, $generator::TYPE_CODE_128))  }}"></td>
                         <td>
                             <button class="btn btn-warning" onclick="mdlHarga(this.value)" value="{{ $item->id }}">Atur Harga</button>
                             <button class="btn btn-danger" onclick="delBar(this.value)" value="{{ $item->id }}">Hapus</button>
