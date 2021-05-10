@@ -48,7 +48,6 @@ const getHarga = async() => {
     });
 }
 $('#addBarang').on("submit", function(event) {
-    console.log('submitting');
     event.preventDefault();
     $.ajax({
         url: "/print",
@@ -56,11 +55,23 @@ $('#addBarang').on("submit", function(event) {
         dataType: "JSON",
         data: $('#addBarang').serialize(),
         success: function(data) {
-            if (data == true) { console.log('success'); }
+            if (data == true) { getPrint(); }
 
         }
     });
 });
+
+function delBar(id) {
+    $.ajax({
+        url: "/print",
+        method: "delete",
+        data: { id: id },
+        success: function(data) {
+            getPrint();
+        }
+    });
+}
 $(document).ready(function() {
     getBarang();
+    getPrint();
 });

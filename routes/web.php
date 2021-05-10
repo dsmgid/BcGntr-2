@@ -26,3 +26,4 @@ Route::put('harga', [IndexController::class, 'addHarga']);
 Route::delete('harga', [IndexController::class, 'delHarga']);
 Route::get('print', [IndexController::class,'gPrint']);
 Route::post('print', [IndexController::class, 'addPrint']);
+Route::delete('print', [IndexController::class, 'delPrint']);

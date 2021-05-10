@@ -66,4 +66,9 @@ class IndexController extends Controller
         $db->save();
         return true;
     }
+    public function delPrint(Request $request){
+        $db = PrintModel::find($request->id);
+        $db->delete();
+        return true;
+    }
 }
