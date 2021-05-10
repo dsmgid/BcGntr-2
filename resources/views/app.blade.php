@@ -71,7 +71,7 @@
 
 	    <footer class="app-footer">
 		    <div class="container text-center py-3">
-            <small class="copyright">Copyright &copy; DSMG. All rights reserved. v1.0.0-alpha
+            <small class="copyright">Copyright &copy; DSMG. All rights reserved. v1.0.0-beta.1
 
 		    </div>
 	    </footer><!--//app-footer-->
