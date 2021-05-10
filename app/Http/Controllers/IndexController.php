@@ -15,6 +15,10 @@ class IndexController extends Controller
     public function dPrint(){
         return view('printd');
     }
+    public function tdPrint(){
+        $data['print'] = PrintModel::all();
+        return view('printdt', $data);
+    }
     public function gPrint(){
         $data['print'] = PrintModel::all();
         return view('print', $data);

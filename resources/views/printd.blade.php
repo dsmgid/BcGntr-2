@@ -30,7 +30,27 @@
                     class="ti-shopping-cart mr-2"></span>Tambah Barang</button>
             </form>
         </div>
+        <br>
+        <div class="card m-t-30">
+            <div class="card-body table-responsive">
+              <table id="table" class="table table-bordered dt-responsive nowrap"
+              style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+              <thead>
+                  <tr>
+                      <td>No</td>
+                      <td>Nama</td>
+                      <td>Harga</td>
+                      <td>Barcode</td>
+                      <td>Action</td>
+                  </tr>
+              </thead>
+              <tbody>
+              </tbody>
+          </table>
+            </div>
+        </div>
     </div>
+
 </div>
 @endsection
 @section('footer')

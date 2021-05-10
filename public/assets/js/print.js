@@ -16,6 +16,17 @@ const getBarang = async() => {
         }
     });
 }
+const getPrint = async() => {
+    await $.ajax({
+        url: "/printdt",
+        method: "GET",
+        success: function(data) {
+            $('#table').html(data);
+            $('#table').DataTable();
+            return true;
+        }
+    });
+}
 const getHarga = async() => {
     id = $("#nbs option:selected").attr("id");
     $("#barcode").val($("#nbs option:selected").attr("barcode"));

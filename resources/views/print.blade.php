@@ -37,7 +37,7 @@
         @foreach ($print as $item)
         <div class="label">
             {{ $item->nama }}
-            <br> <img src="data:image/png;base64,{{ base64_encode($generator->getBarcode($item->barcode, $generator::TYPE_CODE_128))  }}" height="74" width="200">
+            <br> <img src="data:image/png;base64,{{ base64_encode($generator->getBarcode($item->barcode, $generator::TYPE_UPC_A))  }}" height="74" width="200">
             <br> Rp. {{ number_format($item->harga,2,',','.') }}
             <br>
         </div>

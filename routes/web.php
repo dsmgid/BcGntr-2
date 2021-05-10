@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [IndexController::class, 'index']);
-Route::get('/printd', [IndexController::class, 'dPrint']);
+Route::get('printd', [IndexController::class, 'dPrint']);
+Route::get('printdt', [IndexController::class, 'tdPrint']);
 Route::get('barang', [IndexController::class, 'getBarang']);
 Route::get('barangjson', [IndexController::class, 'getBarangJson']);
 Route::post('barang', [IndexController::class, 'addBarang']);
