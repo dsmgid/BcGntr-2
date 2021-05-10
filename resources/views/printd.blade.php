@@ -2,7 +2,11 @@
 @section('content')
 <div class="row">
     <div class="col-xl-12">
+        <a  class="btn btn-success" href="/print">
+            Print
+        </a>
         <div class="card m-b-30">
+
             <div class="card-body">
                 <form id="addBarang">
                     <div class="form-group row">
