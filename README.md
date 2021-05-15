@@ -2,3 +2,6 @@
 
 ## Barcode Generator v2
 
+Included in this project:
+- Test of multiple "harga" from single "barang"
+- Test of barcode generation and label printing
